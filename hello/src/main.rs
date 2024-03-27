@@ -7,6 +7,7 @@ fn main() {
     // a slice must de-reference by using  - & - and [ inclusive .. exclusive ]
     let slice = &arr[1..4]; // [1,2,3,4]
 
+    // for the parameters, you have to define the type and length of array
     fn borrowing_slice(arr:[u8;5], slice:&[u8]){
 
         println!("{:?}", arr);
