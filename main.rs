@@ -1,3 +1,5 @@
 fn main() {
-    println!("Hi James, Hello World!");
+
+    let s = "hello world" 
+    println!(s);
 }
