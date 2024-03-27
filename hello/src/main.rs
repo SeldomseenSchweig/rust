@@ -30,7 +30,6 @@ fn main() {
     let str: &str = "Howdy";
     // this string has no functions
     
-
     s.push('1');
-    println!("{}", s);
+    println!("{}, {}", s, str);
 }
