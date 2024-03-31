@@ -32,4 +32,21 @@ fn main() {
     
     s.push('1');
     println!("{}, {}", s, str);
+
+    //tuples 
+    // hold more the one kind of item, arrays, ints chars, etc
+    //accessed by dot notation
+
+    let tuple = (5,false, 3.5);
+
+    let tuple1 = (1,'3',[1]);
+    let tuple2 = (1,"reg");
+
+    println!("tuple1: {}, {}, {:?}", tuple1.0, tuple1.1, tuple1.2);
+    println!("tuple2: {:?}", tuple2);
+
+    let (a,b,c) = tuple;
+    
+    println!("a: {}, b: {}, c: {}", a,b,c);
+
 }
