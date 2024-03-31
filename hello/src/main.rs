@@ -49,4 +49,14 @@ fn main() {
     
     println!("a: {}, b: {}, c: {}", a,b,c);
 
+
+    // functions
+    // arrow is for return value
+
+    println!("Are they even? 2: {}, 3: {}", is_even(2), is_even(3));
+    pub fn is_even(num:u8) -> bool {
+        let dig = num % 2; 
+         dig == 0
+    }
+
 }
