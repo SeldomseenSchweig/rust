@@ -5,9 +5,11 @@ fn main() {
     let arr = [1,2,3,4,5];
 
     // a slice must de-reference by using  - & - and [ inclusive .. exclusive ]
+    // ampersand gets us the pointer
     let slice = &arr[1..4]; // [1,2,3,4]
 
     // for the parameters, you have to define the type and length of array
+    // The array length of the function must be the same as what is called in
     fn borrowing_slice(arr:[u8;5], slice:&[u8]){
 
         println!("{:?}", arr);
@@ -52,11 +54,47 @@ fn main() {
 
     // functions
     // arrow is for return value
+    //return value is implied by not using a semi colon isn the return statement
 
-    println!("Are they even? 2: {}, 3: {}", is_even(2), is_even(3));
+    println!("Are they even? 2: {}, 3: {}", is_even(2), is_even(0));
     pub fn is_even(num:u8) -> bool {
         let dig = num % 2; 
-         dig == 0
+         dig == 0 // return a bool
     }
 
+
+    // for loops
+    
+    for x in 0..7{
+        println!(" loop num: {}",x);
+
+    }
+
+    // match
+    let i = 7;
+    match i {
+        0 => println!("you matched 0"),
+        1 => println!("you matched 1"),
+        2 => println!("you matched 2"),
+        _ => println!("default")
+
+    }
+    let brand =  String::from("Toyata");
+    let model = String::from("prius");
+    let prius = Car { brand, year: 2012, model};
+    prius.print_name()
+
+}
+
+
+struct Car {
+    brand: String,
+    year: i32,
+    model:String
+}
+
+impl Car {
+    fn print_name(&self){
+        println!("{}", self.model)
+    }
 }
