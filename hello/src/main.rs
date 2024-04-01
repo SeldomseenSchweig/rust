@@ -82,7 +82,17 @@ fn main() {
     let brand =  String::from("Toyata");
     let model = String::from("prius");
     let prius = Car { brand, year: 2012, model};
-    prius.print_name()
+    prius.print_name();
+
+
+    // vectors are like arrays, but with more functionality
+    let mut vec:Vec<i64> = vec![0,1,2,3,5];
+
+    println!("{:?}, length is {} ", vec, vec.len());
+    vec.push(1);
+    println!("now vec is:{:?}", vec);
+
+
 
 }
 
