@@ -89,7 +89,8 @@ fn main() {
 
 // struct === class
 // traits are things you can add to structs
-// impl adds functions to structs
+// impl adds functions to structscd
+ 
 struct Car {
     brand: String,
     year: i32,
