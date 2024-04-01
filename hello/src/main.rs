@@ -87,6 +87,9 @@ fn main() {
 }
 
 
+// struct === class
+// traits are things you can add to structs
+// impl adds functions to structs
 struct Car {
     brand: String,
     year: i32,
@@ -97,4 +100,16 @@ impl Car {
     fn print_name(&self){
         println!("{}", self.model)
     }
+}
+
+impl Truck for Car{
+    fn is_electric(&self) -> bool {
+        false
+    }
+}
+trait Truck {
+    fn bed(&self) -> bool{
+        true
+    }
+    fn is_electric(&self) -> bool;
 }
