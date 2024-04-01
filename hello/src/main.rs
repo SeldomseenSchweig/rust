@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 fn main() {
 
     // Arrays
@@ -93,8 +95,30 @@ fn main() {
     println!("now vec is:{:?}", vec);
 
 
+    //Hash Maps
+    //key pair objects but require you to 
+    //import them from library
 
-}
+    let mut map = HashMap::new();
+
+    map.insert(0, "item1");
+    map.insert(1, "item2");
+
+    println!("{:?}", map);
+
+
+    match map.get(&0){
+        Some(str) => println!("Matched {}", str),
+        _ => println!("No Matches found")
+        };
+
+
+        
+    }
+
+
+
+
 
 
 // struct === class
